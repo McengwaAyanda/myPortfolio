@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mcengwa Ayanda's portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">  
+    </head>
+    <body>
+        <!-- Home -->
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#header"> Home</a></li>
+                        <li><a href="#about"> About</a></li>
+                        <li><a href="#projects"> Projects</a></li>
+                        <li><a href="#Contact"> Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Software Developer/ IT Support Technician</p>
+                    <h1>Hi my name is <span>Ayanda Mcengwa</span> </h1>
+                </div>
+            </div>
+        </div>
+        <!--About Me -->
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="AboutMe.png"/>
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About me</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut eos quis tempore neque quaerat assumenda vitae provident, saepe quod enim eum et, quibusdam explicabo laudantium architecto vero corrupti qui hic?</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                                <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Languages</span><br>Java<br>JavaScript<br>Scala<br>SQL</li>
+                                    <li><span>Frameworks</span><br>React<br>Springboot<br>Bootscrap</li>
+                                    <li><span>App Development</span><br>Designing App Development</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2017</span><br>Qokolweni Senior Secondary School - Matric</li>
+                                    <li><span>2018</span><br>Cape Peninsula University of Technology- <br>Higher Certificate in Information Technology</li>
+                                </ul>
+                        </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>MERN Stack </span><br>MERN stack web application</li>
+                                    <li><span>Capstone project</span><br>Fullstack Java application</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+        <!-- Projects Container -->
+        <div id="projects">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Student Market</h2>
+                        <p>this is a website for students that want to buy or sell study material online</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>Hire a painter</h2>
+                        <p>this is a website for people who want to paint thier houses</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2></h2>
+                        <p>this is a UX/UI design test</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!-- Contact page -->
+         <div class="Contact" style="text-align: center;">
+            <div id="Contact">
+                <h1 class="Contact">Contact</h1>
+                <form>
+                    <label for="firstname">First Name: </label><br>
+                    <input type="text" id="firstname" name="firstname" placeholder="firstname"></input><br>
+                    <label for="lastname">Last Name: </label><br>
+                    <input type="text" id="lastname" name="lastname" placeholder="lastname"></input><br>
+                    <label for="email">email: </label><br>
+                    <input type="text" id="email" name="email" placeholder="abc123@"></input><br>
+                    <label for="phone">Phone No.: </label><br>
+                    <input type="text" id="phone" name="phone" placeholder="060-XXX-XXX"></input><br>
+                    <label for="massage">Massage</label><br>
+                    <textarea id="massage" name="massage" placeholder="write something" style="height: 100px; width: 50%;"></textarea><br>
+                    <input type="submit" value="Submit" width="50px"> 
+                    
+                </form>
+
+            </div>
+         </div>
+ 
+        
+        
+                <script>
+                    var tablinks = document.getElementsByClassName("tab-links");
+                    var tabcontents = document.getElementsByClassName("tab-contents");
+                    function opentab(tabname){
+                        for(tablink of tablinks){
+                            tablink.classList.remove("active-link");
+                        }
+                        for(tabcontent of tabcontents){
+                            tabcontent.classList.remove("active-tab");
+                        }
+                        event.currentTarget.classList.add("active-link");
+                        document.getElementById(tabname).classList.add("active-tab");
+                    }
+                </script>
+                    
+        
+    </body>
+</html>
